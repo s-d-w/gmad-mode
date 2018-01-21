@@ -27,11 +27,14 @@
 			       "rad" "mrad" "urad"
 			       "degrees"
 			       "clight"))
+	     (gmad-preprocessor '("include"))
 	     (gmad-functions-regexp (regexp-opt gmad-functions 'words))
-	     (gmad-constants-regexp (regexp-opt gmad-constants 'words)))
+	     (gmad-constants-regexp (regexp-opt gmad-constants 'words))
+	     (gmad-preprocessor-regexp (regexp-opt gmad-preprocessor 'words)))
 	`(
 	  (,gmad-functions-regexp . font-lock-builtin-face)
 	  (,gmad-constants-regexp . font-lock-constant-face)
+	  (,gmad-preprocessor-regexp . font-lock-preprocessor-face)
 	  )))
 
 (define-derived-mode gmad-mode prog-mode "GMAD MODE"
