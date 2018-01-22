@@ -28,13 +28,27 @@
 			       "degrees"
 			       "clight"))
 	     (gmad-preprocessor '("include"))
+	     (gmad-types '("drift" "rf" "sbend" "rbend" "vkicker"
+			   "hkicker" "kicker" "tkicker" "quadrupole"
+			   "sextupole" "octupole" "decapole"
+			   "multipole" "thinmult" "solenoid" "ecol" "rcol"
+			   "muspoiler" "shield" "degrader" "laser"
+			   "screen" "awakescreen" "awakespectrometer"
+			   "transform3d" "line"
+			   ))
+	     (gmad-keywords '("beam" "option" "print" "range" "stop" "use"
+			      "sample" "csample" ))
 	     (gmad-functions-regexp (regexp-opt gmad-functions 'words))
 	     (gmad-constants-regexp (regexp-opt gmad-constants 'words))
-	     (gmad-preprocessor-regexp (regexp-opt gmad-preprocessor 'words)))
+	     (gmad-preprocessor-regexp (regexp-opt gmad-preprocessor 'words))
+	     (gmad-types-regexp (regexp-opt gmad-types 'words))
+	     (gmad-keywords-regexp (regexp-opt gmad-keywords 'words)))
 	`(
 	  (,gmad-functions-regexp . font-lock-builtin-face)
 	  (,gmad-constants-regexp . font-lock-constant-face)
 	  (,gmad-preprocessor-regexp . font-lock-preprocessor-face)
+	  (,gmad-types-regexp . font-lock-type-face)
+	  (,gmad-keywords-regexp . font-lock-keyword-face)
 	  )))
 
 (define-derived-mode gmad-mode prog-mode "GMAD MODE"
