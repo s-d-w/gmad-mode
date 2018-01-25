@@ -9,6 +9,7 @@
         ;; python style comment: “# …”
         (modify-syntax-entry ?! "<" table)
         (modify-syntax-entry ?\n ">" table)
+	(modify-syntax-entry ?_ "w" table)
         table))
 
 (setq gmad-fontlock-keywords
