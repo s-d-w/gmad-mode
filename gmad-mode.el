@@ -50,13 +50,21 @@
 	     (gmad-constants-regexp (regexp-opt gmad-constants 'words))
 	     (gmad-preprocessor-regexp (regexp-opt gmad-preprocessor 'words))
 	     (gmad-types-regexp (regexp-opt gmad-types 'words))
-	     (gmad-keywords-regexp (regexp-opt gmad-keywords 'words)))
+	     (gmad-keywords-regexp (regexp-opt gmad-keywords 'words))
+	     ;; make a group of the word as we want to select just
+	     ;; that to be highlighted, i.e. exclude the colon.
+	     (gmad-variables-regexp (rx (group (1+ word))
+					(0+ space)
+					?:
+					(0+ space)
+					)))
 	`(
 	  (,gmad-functions-regexp . font-lock-builtin-face)
 	  (,gmad-constants-regexp . font-lock-constant-face)
 	  (,gmad-preprocessor-regexp . font-lock-preprocessor-face)
 	  (,gmad-types-regexp . font-lock-type-face)
 	  (,gmad-keywords-regexp . font-lock-keyword-face)
+	  (,gmad-variables-regexp . (1 font-lock-variable-name-face))
 	  )))
 
 (define-derived-mode gmad-mode prog-mode "GMAD MODE"
