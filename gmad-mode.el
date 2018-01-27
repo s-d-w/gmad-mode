@@ -1,6 +1,3 @@
-(defvar gmad-mode-hook nil) ; don't know how to use this yet.
-
-(defvar gmad-mode-syntax-table nil "Syntax table for `gmad-mode'.")
 
 (setq gmad-mode-syntax-table
       ;; make-syntax-table inherits standard-syntax-table, which we
