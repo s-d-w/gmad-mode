@@ -28,25 +28,33 @@
 			       "rad" "mrad" "urad"
 			       "degrees"
 			       "clight"))
+	     ;; from parser.l
 	     (gmad-preprocessor '("include"))
-	     (gmad-types '(
-			   ;; beamline.  from elementtype.cc
-			   "marker" "drift" "rf" "sbend" "rbend" "vkicker"
-			   "hkicker" "kicker" "tkicker" "quadrupole"
-			   "sextupole" "octupole" "decapole"
-			   "multipole" "thinmult" "solenoid" "ecol" "rcol"
-			   "muspoiler" "shield" "degrader" "laser"
-			   "screen" "awakescreen" "awakespectrometer"
-			   "transform3d" "line"
+	     ;; from parser.l
+	     (gmad-types '(;; beamline elements
+			   "marker" "drift" "rf" "rfcavity" "sbend"
+			   "rbend" "hkicker" "vkicker" "kicker"
+			   "tkicker" "quadrupole" "sextupole"
+			   "octupole" "decapole" "multipole" "thinmultipole"
+			   "solenoid" "rcol" "ecol" "muspoiler"
+			   "shield" "element" "screen" "awakescreen"
+			   "awakespectrometer" "transform3d" "laser" "degrader"
 
 			   ;; other definitions
-			   "element" "atom" "field" "material"
-			   "physicsbiasing" "placement" "query"
-			   "region" "tunnel" "cavitymodel"
-			   ))
-	     (gmad-keywords '("beam" "option" "print" "range" "stop" "use"
-			      "sample" "csample" ))
-	     (gmad-functions-regexp (regexp-opt gmad-functions 'words))
+			   "cavitymodel" "cutsregion" "field"
+			   "placement" "query" "tunnel" "xsecbias"
+			   "xsecBias"
+
+			   "matdef" "atom"
+
+			   "line"))
+	     ;; from parser.l
+	     (gmad-keywords '("all" "period" "range" "if" "for"
+			      "else" "begin" "end" "beam" "option"
+			      "beta0" "print" "return" "stop"
+			      "use" "sample" "csample"))
+	     (gmad-functions-regexp (regexp-opt gmad-functions
+						'words))
 	     (gmad-constants-regexp (regexp-opt gmad-constants 'words))
 	     (gmad-preprocessor-regexp (regexp-opt gmad-preprocessor 'words))
 	     (gmad-types-regexp (regexp-opt gmad-types 'words))
