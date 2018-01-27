@@ -29,13 +29,20 @@
 			       "degrees"
 			       "clight"))
 	     (gmad-preprocessor '("include"))
-	     (gmad-types '("drift" "rf" "sbend" "rbend" "vkicker"
+	     (gmad-types '(
+			   ;; beamline.  from elementtype.cc
+			   "marker" "drift" "rf" "sbend" "rbend" "vkicker"
 			   "hkicker" "kicker" "tkicker" "quadrupole"
 			   "sextupole" "octupole" "decapole"
 			   "multipole" "thinmult" "solenoid" "ecol" "rcol"
 			   "muspoiler" "shield" "degrader" "laser"
 			   "screen" "awakescreen" "awakespectrometer"
 			   "transform3d" "line"
+
+			   ;; other definitions
+			   "element" "atom" "field" "material"
+			   "physicsbiasing" "placement" "query"
+			   "region" "tunnel" "cavitymodel"
 			   ))
 	     (gmad-keywords '("beam" "option" "print" "range" "stop" "use"
 			      "sample" "csample" ))
