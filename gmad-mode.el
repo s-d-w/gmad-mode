@@ -72,7 +72,7 @@
 	  (,gmad-variables-regexp . (1 font-lock-variable-name-face))
 	  )))
 
-(define-derived-mode gmad-mode prog-mode "GMAD MODE"
+(define-derived-mode gmad-mode prog-mode "gmad"
   "Major mode for editing Graphical Methodical Accelerator Design
 (GMAD). "
 (setq font-lock-defaults '((gmad-fontlock-keywords)))
