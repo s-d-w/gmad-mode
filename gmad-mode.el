@@ -19,7 +19,7 @@
 			       "TeV" "GeV" "MeV" "keV" "KeV" "eV"
 			       "V" "kV" "MV"
 			       "Tesla"
-			       "km" "m" "cm" "mm" "um" "mum" "nm" "pm"
+			       "km" "m" "cm" "mm" "um" "mum" "nm" "ang" "pm"
 			       "s" "ms" "us" "ns" "ps"
 			       "Hz" "kHz" "GHz"
 			       "rad" "mrad" "urad"
