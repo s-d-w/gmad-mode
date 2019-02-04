@@ -35,7 +35,10 @@
 			   "octupole" "decapole" "multipole" "thinmultipole"
 			   "solenoid" "rcol" "ecol" "muspoiler"
 			   "shield" "element" "screen" "awakescreen"
-			   "awakespectrometer" "transform3d" "laser" "degrader"
+			   "awakespectrometer" "transform3d" "laser"
+			   "degrader" "gap" "thinrmatrix" "paralleltransporter"
+			   "rmatrix" "crystalcol" "wirescanner"
+			   "undulator" "usercomponent"
 
 			   ;; other definitions
 			   "cavitymodel" "cutsregion" "field"
