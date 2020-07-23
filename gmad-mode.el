@@ -15,13 +15,13 @@
 	     (gmad-functions '("sqrt" "cos" "sin" "exp" "log" "tan"
 			       "asin" "acos" "atan" "abs"))
 	     ;; from parser.cc
-	     (gmad-constants '("pi"
-			       "TeV" "GeV" "MeV" "keV" "KeV" "eV"
+	     (gmad-constants '("pi" "twopi" "halfpi"
+			       "PeV" "TeV" "GeV" "MeV" "keV" "KeV" "eV"
 			       "V" "kV" "MV"
-			       "Tesla"
+			       "Tesla" "T"
 			       "km" "m" "cm" "mm" "um" "mum" "nm" "ang" "pm"
 			       "s" "ms" "us" "ns" "ps"
-			       "Hz" "kHz" "GHz"
+			       "Hz" "kHz" "MHz" "GHz"
 			       "rad" "mrad" "urad"
 			       "degrees"
 			       "clight"))
@@ -33,17 +33,18 @@
 			   "rbend" "hkicker" "vkicker" "kicker"
 			   "tkicker" "quadrupole" "sextupole"
 			   "octupole" "decapole" "multipole" "thinmultipole"
-			   "solenoid" "rcol" "ecol" "muspoiler"
-			   "shield" "element" "screen" "awakescreen"
+			   "solenoid" "rcol" "ecol" "jcol" "muonspoiler"
+			   "muspoiler" "shield" "element" "screen" "awakescreen"
 			   "awakespectrometer" "transform3d" "laser"
 			   "degrader" "gap" "thinrmatrix" "paralleltransporter"
 			   "rmatrix" "crystalcol" "wirescanner"
-			   "undulator" "usercomponent"
+			   "undulator" "usercomponent" "dump"
 
 			   ;; other definitions
-			   "cavitymodel" "cutsregion" "field"
-			   "placement" "query" "tunnel" "xsecbias"
-			   "xsecBias"
+			   "cavitymodel" "cutsregion" "newcolour" "crystal"
+			   "field" "placement" "query" "tunnel"
+			   "samplerplacement" "scorer" "scorermesh"
+			   "tunnel" "xsecbias" "xsecBias" "aperture" "blm"
 
 			   "matdef" "atom"
 
