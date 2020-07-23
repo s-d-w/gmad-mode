@@ -77,8 +77,7 @@
 	  )))
 
 (define-derived-mode gmad-mode prog-mode "gmad"
-  "Major mode for editing Graphical Methodical Accelerator Design
-(GMAD). "
+  "Major mode for editing GMAD files. "
 (setq font-lock-defaults '((gmad-fontlock-keywords)))
 (setq comment-start "!")
 (set-syntax-table gmad-mode-syntax-table))
